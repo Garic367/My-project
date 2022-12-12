@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lab_3</title>
+</head>
+<body>
+  <div class="header">
+    <p id="timer"></p>
+    <button id="start" onclick="setTimeout(myTimer,setInterval(myTimer,1000))">Start </button>
+    <button id="stop" onclick="clearTimeout(myInterval)">Stop</button>
+
+<select id="dropdown" onchange='changePainting()'>
+  <option value="">Select imagine</option>
+  <option value="img/car.jpg">Car</option>
+  <option value="img/flowers.jpg">Flowers</option>
+  <option value="img/tree.jpg">Trees</option>
+  <option value="img/seaside.jpg">Seaside</option>
+  <option value="img/stadium.jpg">Stadium</option>
+</select>
+</div>
+
+<div class="app">
+  <div class="box image"> 
+    <img src="https://img.freepik.com/free-photo/orthodoxy-monastery-at-bogolyubovo_1398-3856.jpg?w=1060&t=st=1669036946~exp=1669037546~hmac=8a6106bf9ab805728f846513001bc5868cfc2b978255f4fe8cad1232cb40a849" 
+      alt="" 
+      id="image">
+    <div class="input">
+      <input
+        id="img-url"
+        type="text"
+        placeholder="Input image URL"
+        value="">
+    </div>
+  </div>
+
+  <div class="box settings">
+    <div class="sliders">
+      <div class="slider">
+        <label for="grayscale">Shades of gray</label>
+        <input type="range" min="0" max="100" value="0" id="grayscale">
+      </div>
+
+      <div class="slider">
+        <label for="contrast">Contrast </label>
+        <input type="range" min="50" max="200" value="100" id="contrast">
+      </div>
+
+      <div class="slider">
+        <label for="brightness">Brightness</label>
+        <input type="range" min="50" max="200" value="100" id="brightness">
+      </div>
+
+      <div class="slider">
+        <label for="sepia">Sepia</label>
+        <input type="range" min="0" max="100" value="0" id="sepia">
+      </div>
+
+      <div class="slider">
+        <label for="saturate">Saturation</label>
+        <input type="range" min="0" max="200" value="100" id="saturate">
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn" id="reset" disabled>Cansel</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
